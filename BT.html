@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập mảng</title>
+</head>
+<body>
+<h2 style="color: blue ">Bài 1: Tính trung bình cộng các số lẻ ở vị trí chẵn</h2>
+<script>
+let arr=[3,5,7,24,-6,87,34,-23,54,8,-79,46,-878,34,3,34,6563];
+let count=0;
+let total=0;
+for (let i = 0; i < arr.length; i++) {
+    if (i%2==0 && arr[1]%2==1){
+        count++;
+        total+=arr[i];
+    }
+}
+let tb=total/count;
+document.write('Tổng của các số lẻ ở vị trí chẵn: '+total+'<br>'+'Trung bình cộng của của các số lẻ ở vị trí chẵn là: '+ tb);
+
+</script>
+<h2 style="color: blue">Bài 2+3: Tìm số lớn nhất, nhỏ nhất trong mảng</h2>
+<p>Mảng arr=[3,5,7,24,6,87,34,23,54,8,79,46,878,34,3,34,6563] </p>
+<script>
+    let max=arr[0];
+    let min=arr[0]
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i]>=max){
+            max=arr[i];
+        }
+    }
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i]<=min){
+            min=arr[i];
+        }
+    }
+    document.write('Số lớn nhất trong mảng là: '+max+'<br>'+'Số nhỏ nhất trong mảng là: ' +min)
+</script>
+<h2 style="color: blue">Bài 4: Thay thế các phần tử âm trong mảng = 0</h2>
+<script>
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]<0){
+            arr[i]=0;
+        }
+    }
+    document.write('Mảng sau khi được thay các phần tử âm bằng 0'+ arr);
+</script>
+<h2 style="color: blue">Bài 5:  Xóa các phần tử âm trong mảng</h2>
+<p>Mảng arr1=[3,-5,7,-24,6,87,34,-23,5,8,79,-46,878,34,3,34,6563] </p>
+<script>
+    let arr1=[3,-5,7,-24,6,87,34,-23,5,8,79,-46,878,34,3,34,6563];
+        for (i = 0; i < arr1.length; i++){
+            if (arr1[i]<0) {
+                arr1.splice(i, 1);}
+        }
+    document.write('Mảng sau khi được xóa các phần tử âm: '+ arr1)
+</script>
+<h2 style="color: blue">Bài 6: 6: Sắp xếp mảng đã nhập theo chiều tăng dần </h2>
+<script>
+    let arr2=[3,-5,7,-24,6,87,34,-23,5,8,79,-46,878,34,3,34,6563];
+    let index;
+    for (let i = 0; i < arr2.length; i++) {
+        for (let j = i + 1; j < arr2.length; j++) {
+            let index;
+            if (arr2[i] > arr2[j]) {
+                index = arr2[j]
+                arr2[j] = arr2[i]
+                arr2[i] = index;
+            }
+        }
+    }
+    document.write('Mảng arr2 sau khi được sắp xếp tăng dần: '+arr2)
+</script>
+</body>
+</html>
