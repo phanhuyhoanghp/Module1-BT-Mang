@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=[
+        [2,4,6,7,43],
+        [3,5,7,3,2],
+        [4,6,3,2,6],
+        [4,1,4,2,2],
+        [3,5,6,7,5]
+    ]
+    let total=0;
+    for (let i = 0; i < a.length; i++) {
+        document.write('<br>');
+        for (let j = 0; j < a[i].length; j++) {
+            document.write(a[i][j]+ '&nbsp &nbsp');
+            total+=a[i][j]
+        }
+    }
+    document.write(total)
+</script>
+</body>
+</html>
